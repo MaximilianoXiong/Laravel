@@ -1,30 +1,13 @@
 <?php
 
-use App\Http\Controllers\controladorPrueba;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ComprasController;
 //aqui arriba van los controllers
 
 //aqui van las rutas
 //uri es la url
-//'welcome' es el archivo .blade.php
 //laravel sabe donde esta la vista de forma predefinida
-
-Route::get('/asd', function () {
-    return view('welcome');
-});
-
-//haciendo pruebas de ajax
-Route::post('/ajax', [ProductoController::class, 'pruebasAjax']);
-Route::get('/pruebaAjax', [ProductoController::class, 'ajaxIndex']);
-
-///////////////////////////////////////////
-Route::get('/todos', [UsuarioController::class, 'index']);
-//esto se traduce como "cuando vayamos a esta dir, usaremos el metodo 'index' de la clase UsuarioController"
-
-Route::post('/todos', [UsuarioController::class, 'obtenido']);
 
 //crear
 Route::get('/Agregar', [ProductoController::class, 'create']);
